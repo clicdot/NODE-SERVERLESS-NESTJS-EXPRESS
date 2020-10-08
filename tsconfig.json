@@ -20,7 +20,9 @@
   "exclude": [
     "node_modules",
     ".vscode",
-    "dist"
+    "dist",
+    "test",
+    "**/*spec.ts"
   ],
   "types": [
     "node",

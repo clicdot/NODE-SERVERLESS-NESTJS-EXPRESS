@@ -8,13 +8,13 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "deploy": "sls deploy --aws-profile serverless",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "sls:deploy": "sls deploy --config serverless.deploy.yml",
     "start": "nest start --watch",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "start:sls": "sls offline start --httpPort 5001 --lambdaPort 5002",
+    "start:sls": "sls offline start --httpPort 3031 --lambdaPort 3032",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -33,10 +33,12 @@
     "aws-serverless-express": "^3.3.8",
     "cors": "^2.8.5",
     "fs-extra": "^9.0.1",
+    "helmet": "^4.1.1",
     "nest-router": "^1.0.9",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.3",
+    "swagger-ui-express": "^4.1.4",
     "uuid": "^8.3.0"
   },
   "devDependencies": {

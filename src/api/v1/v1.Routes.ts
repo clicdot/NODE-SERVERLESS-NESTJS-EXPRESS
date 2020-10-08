@@ -8,10 +8,6 @@ export const v1Routes: Routes = [
     path: '/v1',
     children: [
       {
-        path: '/employees',
-        module: EmployeesModule,
-      },
-      {
         path: '/test',
         module: TestModule,
       },
